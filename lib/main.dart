@@ -4,18 +4,27 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: Scaffold(
-          backgroundColor: Colors.lightBlue[300],
-          appBar: AppBar(
-            title: Text(
-              'Ask Me Anything',
-            ),
-            backgroundColor: Colors.blueAccent[700],
-          ),
-          body: BallPage(),
-        ),
+        home: BallHomePage(),
       ),
     );
+
+class BallHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.lightBlue[300],
+        appBar: AppBar(
+          title: Text(
+            'Ask Me Anything',
+          ),
+          backgroundColor: Colors.blueAccent[700],
+        ),
+        body: BallPage(),
+      ),
+    );
+  }
+}
 
 class BallPage extends StatefulWidget {
   @override
